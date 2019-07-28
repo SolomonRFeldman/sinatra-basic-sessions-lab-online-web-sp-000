@@ -14,6 +14,8 @@ class App < Sinatra::Base
     session[:items] = [] unless session[:items] != nil
     session[:items] << params[:item]
     @session = session
+    
+    erb :checkout
   end
   
   
