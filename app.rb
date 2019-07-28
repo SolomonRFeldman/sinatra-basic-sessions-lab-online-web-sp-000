@@ -11,8 +11,9 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
-    session[:items] = [] unless 
+    session[:items] = [] unless session[:items] != nil
     session[:items] << params[:item]
+    @session = session
   end
   
   
